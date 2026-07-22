@@ -1,5 +1,6 @@
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const fraunces = Fraunces({
   variable: "--font-serif",
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
