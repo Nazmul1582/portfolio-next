@@ -12,10 +12,10 @@ export default function Icon() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        background: "linear-gradient(135deg, #3b82f6 0%, #ec4899 100%)",
         borderRadius: "8px",
         fontSize: 20,
-        fontWeight: 700,
+        fontWeight: 900,
         color: "white",
         fontFamily: "system-ui, sans-serif",
       }}
