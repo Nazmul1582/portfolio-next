@@ -1,8 +1,10 @@
+"use client";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
     <header>
       <nav
@@ -56,7 +58,7 @@ export default function Header() {
               </Link>
             </div>
             <button
-              id="mobile-menu-btn"
+              onClick={() => setOpen((prev) => !prev)}
               className="md:hidden p-2 text-slate-400 hover:text-white"
             >
               <Menu className="size-5" />
@@ -64,8 +66,7 @@ export default function Header() {
           </div>
         </div>
         <div
-          id="mobile-menu"
-          className="md:hidden glass border-t border-slate-800 bg-[rgba(15_23_42/0.7)] backdrop-blur-md"
+          className={`${open ? "block" : "hidden"} md:hidden glass border-t border-slate-800 bg-[rgba(15_23_42/0.7)] backdrop-blur-md`}
         >
           <div className="container mx-auto pl-2 pr-4 pt-2 pb-6 space-y-2">
             <Link
