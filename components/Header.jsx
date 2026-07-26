@@ -38,7 +38,7 @@ export default function Header() {
         id="navbar"
         className="transition-all duration-300 fixed top-0 left-0 right-0 z-50"
       >
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl container mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link
               href="#home"
