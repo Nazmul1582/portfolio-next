@@ -3,7 +3,7 @@ import { ChartLine, Rocket, UsersRound } from "lucide-react";
 export default function About() {
   return (
     <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container max-w-7xl mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
             <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">

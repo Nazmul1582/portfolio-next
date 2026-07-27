@@ -1,11 +1,13 @@
 import About from "@/components/About";
+import Experiece from "@/components/Experiece";
 import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main>
       <Hero />
       <About />
+      <Experiece />
     </main>
   );
 }
