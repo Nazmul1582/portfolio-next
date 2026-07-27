@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Experiece from "@/components/Experiece";
 import Hero from "@/components/Hero";
+import ImpactMetrics from "@/components/ImpactMetrics";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Experiece />
       <Projects />
       <Skills />
+      <ImpactMetrics />
     </main>
   );
 }
