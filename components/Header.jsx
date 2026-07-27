@@ -36,7 +36,7 @@ export default function Header() {
     <header>
       <nav
         id="navbar"
-        className="transition-all duration-300 fixed top-0 left-0 right-0 z-50"
+        className="transition-all duration-300 fixed top-0 left-0 right-0 z-50 bg-[rgba(15_23_42/0.7)] backdrop-blur-md"
       >
         <div className="container max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -73,7 +73,7 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`${open ? "block" : "hidden"} md:hidden glass border-t border-slate-800 bg-[rgba(15_23_42/0.7)] backdrop-blur-md`}
+          className={`${open ? "block" : "hidden"} md:hidden glass border-t border-slate-800`}
         >
           <div className="container mx-auto pl-2 pr-4 pt-2 pb-6 space-y-2">
             {navLinks.map((item) => (
