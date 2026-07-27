@@ -24,6 +24,9 @@ export default function Skills() {
         "Responsive Design",
       ],
       toolStyle: "hover:border-blue-500 hover:text-blue-400",
+      borderStyle: "hover:border-blue-500/30",
+      color: "blue",
+      icon: <CodeXml className="size-5" />,
     },
     {
       id: 2,
@@ -33,9 +36,14 @@ export default function Skills() {
         "REST APIs",
         "Pinia",
         "Zustand",
+        "Context API",
+        "JSON",
         "React Hook Form",
       ],
       toolStyle: "hover:border-pink-500 hover:text-pink-400",
+      borderStyle: "hover:border-pink-500/30",
+      color: "pink",
+      icon: <Database className="size-5" />,
     },
     {
       id: 3,
@@ -47,22 +55,30 @@ export default function Skills() {
         "Payment Gateways",
         "POS Systems",
         "i18n",
+        "Catelog Management",
         "Dark Mode",
       ],
       toolStyle: "hover:border-emerald-500 hover:text-emerald-400",
+      borderStyle: "hover:border-emerald-500/30",
+      color: "emerald",
+      icon: <ShoppingCart className="size-5" />,
     },
     {
       id: 4,
-      title: "Backend",
+      title: "Auth & Backend",
       tools: [
         "Node.js",
         "Express.js",
         "MongoDB",
         "Mongoose",
         "Firebase",
-        "PostgreSQL",
+        "JWT Authentication",
+        "RBAC",
       ],
       toolStyle: "hover:border-orange-500 hover:text-orange-400",
+      borderStyle: "hover:border-orange-500/30",
+      color: "orange",
+      icon: <Server className="size-5" />,
     },
     {
       id: 5,
@@ -72,10 +88,14 @@ export default function Skills() {
         "GitHub",
         "ESLint",
         "Chrome DevTools",
+        "npm/pnpm/bun",
         "Codex Pro",
         "OpenCode",
       ],
       toolStyle: "hover:border-purple-500 hover:text-purple-400",
+      borderStyle: "hover:border-purple-500/30",
+      color: "purple",
+      icon: <ToolCase className="size-6" />,
     },
     {
       id: 6,
@@ -88,6 +108,9 @@ export default function Skills() {
         "Multi-project Delivery",
       ],
       toolStyle: "hover:border-yellow-500 hover:text-yellow-400",
+      borderStyle: "hover:border-yellow-500/30",
+      color: "yellow",
+      icon: <Users className="size-5" />,
     },
   ];
   return (
@@ -104,6 +127,32 @@ export default function Skills() {
             Production-proven stack for building scalable e-commerce and
             enterprise applications.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tools.map((tool) => (
+            <div
+              key={tool.id}
+              className={`bg-slate-800/30 border border-slate-700 rounded-2xl p-6 ${tool.borderStyle} transition-colors`}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                  {tool.icon}
+                </div>
+                <h4 className="text-lg font-bold text-white">{tool.title}</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {tool.tools.map((el, idx) => (
+                  <span
+                    key={idx}
+                    className={`skill-tag px-3 py-1.5 bg-slate-700 text-slate-200 text-sm rounded-lg border border-slate-600 ${tool.toolStyle} cursor-default duration-300 transition-all transform hover:scale-105 hover:shadow-xl`}
+                  >
+                    {el}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
