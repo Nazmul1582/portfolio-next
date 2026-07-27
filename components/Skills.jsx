@@ -6,9 +6,10 @@ import {
   ToolCase,
   Users,
 } from "lucide-react";
+import SkillCard from "./SkillCard";
 
 export default function Skills() {
-  const tools = [
+  const skills = [
     {
       id: 1,
       title: "Frontend Core",
@@ -130,28 +131,8 @@ export default function Skills() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tools.map((tool) => (
-            <div
-              key={tool.id}
-              className={`bg-slate-800/30 border border-slate-700 rounded-2xl p-6 ${tool.borderStyle} transition-colors`}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                  {tool.icon}
-                </div>
-                <h4 className="text-lg font-bold text-white">{tool.title}</h4>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {tool.tools.map((el, idx) => (
-                  <span
-                    key={idx}
-                    className={`skill-tag px-3 py-1.5 bg-slate-700 text-slate-200 text-sm rounded-lg border border-slate-600 ${tool.toolStyle} cursor-default duration-300 transition-all transform hover:scale-105 hover:shadow-xl`}
-                  >
-                    {el}
-                  </span>
-                ))}
-              </div>
-            </div>
+          {skills.map((skill) => (
+            <SkillCard key={skill.id} skill={skill} />
           ))}
         </div>
       </div>
