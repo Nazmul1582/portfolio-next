@@ -1,3 +1,5 @@
+import CountUp from "./CountUp";
+
 export default function ImpactMetrics() {
   return (
     <section className="py-24">
@@ -19,38 +21,26 @@ export default function ImpactMetrics() {
 
           <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div
-                className="text-4xl sm:text-5xl font-bold text-white mb-2 counter-value"
-                data-target="200"
-              >
-                0
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                <CountUp from={0} to={200} suffix="K+" />
               </div>
               <div className="text-blue-200">Books Cataloged</div>
             </div>
             <div className="text-center">
-              <div
-                className="text-4xl sm:text-5xl font-bold text-white mb-2 counter-value"
-                data-target="50"
-              >
-                0
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                <CountUp from={0} to={50} suffix="K+" />
               </div>
               <div className="text-blue-200">Authors</div>
             </div>
             <div className="text-center">
-              <div
-                className="text-4xl sm:text-5xl font-bold text-white mb-2 counter-value"
-                data-target="7"
-              >
-                0
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                <CountUp from={0} to={7} suffix="K+" />
               </div>
               <div className="text-blue-200">Publishers</div>
             </div>
             <div className="text-center">
-              <div
-                className="text-4xl sm:text-5xl font-bold text-white mb-2 counter-value"
-                data-target="230"
-              >
-                0
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                <CountUp from={0} to={230} suffix="K+" />
               </div>
               <div className="text-blue-200">Customers</div>
             </div>

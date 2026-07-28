@@ -1,4 +1,5 @@
 import { ChartLine, Rocket, UsersRound } from "lucide-react";
+import CountUp from "./CountUp";
 
 export default function About() {
   return (
@@ -77,40 +78,28 @@ export default function About() {
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4 bg-slate-800/75 rounded-xl">
-                    <div
-                      className="text-3xl font-bold text-white counter-value"
-                      data-target="200"
-                    >
-                      0
+                    <div className="text-3xl font-bold text-white">
+                      <CountUp from={0} to={200} suffix="K+" />
                     </div>
                     <div className="text-sm text-slate-400 mt-1">Books</div>
                   </div>
                   <div className="text-center p-4 bg-slate-800/75 rounded-xl">
-                    <div
-                      className="text-3xl font-bold text-white counter-value"
-                      data-target="50"
-                    >
-                      0
+                    <div className="text-3xl font-bold text-white">
+                      <CountUp from={0} to={50} suffix="K+" />
                     </div>
                     <div className="text-sm text-slate-400 mt-1">Authors</div>
                   </div>
                   <div className="text-center p-4 bg-slate-800/75 rounded-xl">
-                    <div
-                      className="text-3xl font-bold text-white counter-value"
-                      data-target="7"
-                    >
-                      0
+                    <div className="text-3xl font-bold text-white">
+                      <CountUp from={0} to={7} suffix="K+" />
                     </div>
                     <div className="text-sm text-slate-400 mt-1">
                       Publishers
                     </div>
                   </div>
                   <div className="text-center p-4 bg-slate-800/75 rounded-xl">
-                    <div
-                      className="text-3xl font-bold text-white counter-value"
-                      data-target="230"
-                    >
-                      0
+                    <div className="text-3xl font-bold text-white">
+                      <CountUp from={0} to={230} suffix="K+" />
                     </div>
                     <div className="text-sm text-slate-400 mt-1">Customers</div>
                   </div>
