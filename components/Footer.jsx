@@ -1,21 +1,24 @@
 import { Mail, Phone } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 export default function Footer() {
   return (
     <section id="contact" className="pt-24 pb-12 bg-slate-900/50">
       <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center">
-        <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
-          Get In Touch
-        </h2>
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-          Let&apos;s Build Something Amazing
-        </h3>
-        <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-          I&apos;m currently open for Frontend Developer, Mid-Level Frontend,
-          Frontend Team Lead, and frontend-focused Full Stack Developer roles.
-          If you&apos;re looking for someone who can ship production-grade code
-          and lead teams, let&apos;s talk.
-        </p>
+        <Reveal>
+          <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
+            Get In Touch
+          </h2>
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Let&apos;s Build Something Amazing
+          </h3>
+          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
+            I&apos;m currently open for Frontend Developer, Mid-Level Frontend,
+            Frontend Team Lead, and frontend-focused Full Stack Developer roles.
+            If you&apos;re looking for someone who can ship production-grade
+            code and lead teams, let&apos;s talk.
+          </p>
+        </Reveal>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <a

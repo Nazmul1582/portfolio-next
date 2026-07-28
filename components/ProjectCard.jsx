@@ -1,8 +1,13 @@
+"use client";
+
+import { motion } from "motion/react";
 import { Check, ExternalLink, SquareCode } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 duration-300 shadow-2xl">
+    <motion.div
+      whileHover={{ y: -6 }}
+      className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
       <a
         href={project.liveLink}
         target="_blank"
@@ -67,6 +72,6 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

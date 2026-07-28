@@ -1,4 +1,8 @@
+"use client";
+
+import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
+import { Reveal, StaggerGrid, StaggerItem } from "./Reveal";
 
 export default function Experiece() {
   const experieces = [
@@ -52,20 +56,23 @@ export default function Experiece() {
   return (
     <section id="experience" className="py-24 bg-slate-900/50 relative">
       <div className="container max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
             Experience
           </h2>
           <h3 className="text-3xl sm:text-4xl font-bold text-white">
             Career Trajectory
           </h3>
-        </div>
+        </Reveal>
 
-        <div className="max-w-4xl mx-auto relative timeline-line pl-8 space-y-8 lg:space-y-12">
+        <StaggerGrid className="max-w-4xl mx-auto relative timeline-line pl-8 space-y-8 lg:space-y-12">
           {experieces.map((item) => (
-            <div key={item.id} className="relative lg:pl-8">
+            <StaggerItem key={item.id} type="fadeInLeft" className="relative lg:pl-8">
               <div className={item.timelineRoundStyle}></div>
-              <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 hover:border-blue-500/50 transition-colors">
+              <motion.div
+                whileHover={{ x: 4 }}
+                className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 hover:border-blue-500/50 transition-colors"
+              >
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-white">
@@ -88,10 +95,10 @@ export default function Experiece() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGrid>
       </div>
     </section>
   );

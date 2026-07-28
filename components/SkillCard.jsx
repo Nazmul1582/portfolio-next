@@ -1,6 +1,11 @@
+"use client";
+
+import { motion } from "motion/react";
+
 export default function SkillCard({ skill }) {
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -4 }}
       className={`bg-slate-800/30 border border-slate-700 rounded-2xl p-6 ${skill.borderStyle} transition-colors`}
     >
       <div className="flex items-center gap-3 mb-6">
@@ -9,16 +14,29 @@ export default function SkillCard({ skill }) {
         </div>
         <h4 className="text-lg font-bold text-white">{skill.title}</h4>
       </div>
-      <div className="flex flex-wrap gap-2">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.03 } },
+        }}
+        className="flex flex-wrap gap-2"
+      >
         {skill.tools.map((el, idx) => (
-          <span
+          <motion.span
             key={idx}
-            className={`px-3 py-1.5 bg-slate-700 text-slate-200 text-sm rounded-lg border border-slate-600 ${skill.toolStyle} cursor-default duration-200 transition-all transform hover:scale-105 hover:shadow-xl`}
+            variants={{
+              hidden: { opacity: 0, scale: 0.8 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            className={`px-3 py-1.5 bg-slate-700 text-slate-200 text-sm rounded-lg border border-slate-600 ${skill.toolStyle} cursor-default duration-200 transition-all hover:scale-105 hover:shadow-xl`}
           >
             {el}
-          </span>
+          </motion.span>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

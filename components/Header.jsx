@@ -1,10 +1,14 @@
 "use client";
+import { motion, useScroll, useTransform } from "motion/react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const height = useTransform(scrollY, [0, 100], ["5rem", "3.5rem"]);
+  const bgOpacity = useTransform(scrollY, [0, 100], ["rgba(15,23,42,0.7)", "rgba(15,23,42,0.95)"]);
   const navLinks = [
     {
       id: 1,
@@ -34,10 +38,11 @@ export default function Header() {
   ];
   return (
     <header>
-      <nav
-        id="navbar"
-        className="transition-all duration-300 fixed top-0 left-0 right-0 z-50 bg-[rgba(15_23_42/0.7)] backdrop-blur-md"
-      >
+        <motion.nav
+          id="navbar"
+          style={{ height: height, backgroundColor: bgOpacity }}
+          className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md flex items-center"
+        >
         <div className="container max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link
@@ -94,7 +99,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 }

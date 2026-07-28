@@ -1,3 +1,4 @@
+import { Reveal } from "./Reveal";
 import CountUp from "./CountUp";
 
 export default function ImpactMetrics() {
@@ -9,7 +10,7 @@ export default function ImpactMetrics() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
-          <div className="relative z-10 text-center mb-12">
+          <Reveal className="relative z-10 text-center mb-12">
             <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Boisodai Platform Impact
             </h3>
@@ -17,7 +18,7 @@ export default function ImpactMetrics() {
               Key metrics from Bangladesh&apos;s largest book e-commerce
               platform
             </p>
-          </div>
+          </Reveal>
 
           <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">

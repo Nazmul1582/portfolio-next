@@ -6,6 +6,7 @@ import {
   ToolCase,
   Users,
 } from "lucide-react";
+import { Reveal, StaggerGrid, StaggerItem } from "./Reveal";
 import SkillCard from "./SkillCard";
 
 export default function Skills() {
@@ -117,7 +118,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 bg-slate-900/50">
       <div className="container max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
             Technical Arsenal
           </h2>
@@ -128,13 +129,15 @@ export default function Skills() {
             Production-proven stack for building scalable e-commerce and
             enterprise applications.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill) => (
-            <SkillCard key={skill.id} skill={skill} />
+            <StaggerItem key={skill.id}>
+              <SkillCard skill={skill} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGrid>
       </div>
     </section>
   );
