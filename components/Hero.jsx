@@ -1,6 +1,7 @@
 import { ChevronDown, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import TypeWriter from "./TypeWriter";
 
 export default function Hero() {
   return (
@@ -22,8 +23,8 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-gradient animate-slide-up mb-6">
               Md. Nazmul Hasan
             </h1>
-            <h3 className="sm:text-2xl text-slate-400 font-light italic animate-fade-in mb-7">
-              Frontend-Focused Full Stack Developer...
+            <h3 className="sm:text-2xl text-slate-400 font-light animate-fade-in mb-7">
+              <TypeWriter />
             </h3>
             <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-400 mb-10 leading-relaxed animate-slide-up">
               Scaling e-commerce platforms with{" "}
@@ -43,9 +44,10 @@ export default function Hero() {
                 View My Work
                 <ArrowRight className="size-5" />
               </Link>
-              <Link
+              <a
                 href="https://github.com/nazmul1582"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-[11px] bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-full transition-all hover:scale-105 border border-slate-700"
               >
                 <svg
@@ -64,7 +66,7 @@ export default function Hero() {
                   />
                 </svg>
                 <span>GitHub</span>
-              </Link>
+              </a>
             </div>
 
             <div className="mt-12 flex flex-wrap gap-6 justify-center animate-slide-up">

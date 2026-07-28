@@ -35,10 +35,11 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center gap-6">
-          <a
-            href="https://linkedin.com/in/nazmul1582"
-            target="_blank"
-            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+            <a
+              href="https://linkedin.com/in/nazmul1582"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -57,10 +58,11 @@ export default function Footer() {
               <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
             </svg>
           </a>
-          <a
-            href="https://github.com/nazmul1582"
-            target="_blank"
-            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+            <a
+              href="https://github.com/nazmul1582"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -78,10 +80,11 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a
-            href="https://nazmul1582.netlify.app"
-            target="_blank"
-            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+            <a
+              href="https://nazmul1582.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
