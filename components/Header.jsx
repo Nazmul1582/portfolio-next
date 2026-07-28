@@ -42,7 +42,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link
               href="#home"
-              className="text-xl lg:text-2xl font-bold tracking-tight text-gradient"
+              className="text-xl lg:text-2xl font-serif font-bold tracking-tight text-gradient"
             >
               Nazmul
             </Link>

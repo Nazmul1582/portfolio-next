@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${inter.variable} h-full antialiased scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-950`}
     >
       <body className="min-h-full">
         <Header />
