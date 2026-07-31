@@ -1,32 +1,61 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronDown, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import TypeWriter from "./TypeWriter";
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const blueY = useTransform(scrollY, [0, 500], [0, -80]);
+  const pinkY = useTransform(scrollY, [0, 500], [0, -120]);
+
+  const container = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.15 } },
+  };
+
+  const child = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 lg:py-24">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="absolute inset-0 bg-grid opacity-20"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+        <motion.div
+          style={{ y: blueY }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse"
+        />
+        <motion.div
+          style={{ y: pinkY }}
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
+        />
 
-        <div className="relative z-10 max-w-4xl mx-auto flex justify-center items-center text-center">
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-sm text-gradient mb-6 animate-slide-up">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 max-w-4xl mx-auto flex justify-center items-center text-center"
+        >
+          <motion.div variants={child}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-sm text-gradient mb-6">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Available for Mid Level Frontend Roles
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-gradient animate-slide-up mb-6">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-gradient mb-6">
               Md. Nazmul Hasan
             </h1>
-            <h3 className="sm:text-2xl text-slate-400 font-light animate-fade-in mb-7">
+            <h3 className="sm:text-2xl text-slate-400 font-light mb-7">
               <TypeWriter />
             </h3>
-            <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-400 mb-10 leading-relaxed animate-slide-up">
+            <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-400 mb-10 leading-relaxed">
               Scaling e-commerce platforms with{" "}
               <span className="text-white font-semibold">
                 15+ production apps
@@ -36,7 +65,7 @@ export default function Hero() {
               specialist.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="#projects"
                 className="group px-8 py-3 bg-gradient text-white font-semibold rounded-full transition-all hover:scale-105 flex items-center gap-2"
@@ -69,7 +98,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-6 justify-center animate-slide-up">
+            <div className="mt-12 flex flex-wrap gap-6 justify-center">
               <div className="flex items-center gap-2 text-slate-400 text-sm">
                 <CheckCircle className="size-4" />
                 <span>15+ Production Apps</span>
@@ -83,8 +112,8 @@ export default function Hero() {
                 <span>Team Leadership</span>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
