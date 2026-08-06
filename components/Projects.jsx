@@ -7,6 +7,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import ProjectCard from "./ProjectCard";
+import { Reveal } from "./Animation";
 
 export default function Projects() {
   const projects = [
@@ -142,7 +143,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
             Featured Work
           </h2>
@@ -153,7 +154,7 @@ export default function Projects() {
             Real platforms serving real customers. Live links to production
             systems I&apos;ve built, contributed and maintained.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
