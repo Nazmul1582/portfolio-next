@@ -1,21 +1,24 @@
 import { Mail, Phone } from "lucide-react";
+import { Reveal } from "./Animation";
 
 export default function Footer() {
   return (
     <section id="contact" className="pt-24 pb-12 bg-slate-900/50">
       <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center">
-        <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
-          Get In Touch
-        </h2>
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-          Let&apos;s Build Something Amazing
-        </h3>
-        <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-          I&apos;m currently open for Frontend Developer, Mid-Level Frontend,
-          Frontend Team Lead, and frontend-focused Full Stack Developer roles.
-          If you&apos;re looking for someone who can ship production-grade code
-          and lead teams, let&apos;s talk.
-        </p>
+        <Reveal>
+          <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
+            Get In Touch
+          </h2>
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Let&apos;s Build Something Amazing
+          </h3>
+          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
+            I&apos;m currently open for Frontend Developer, Mid-Level Frontend,
+            Frontend Team Lead, and frontend-focused Full Stack Developer roles.
+            If you&apos;re looking for someone who can ship production-grade
+            code and lead teams, let&apos;s talk.
+          </p>
+        </Reveal>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <a
@@ -35,11 +38,11 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center gap-6">
-            <a
-              href="https://linkedin.com/in/nazmul1582"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+          <a
+            href="https://linkedin.com/in/nazmul1582"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -58,11 +61,11 @@ export default function Footer() {
               <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
             </svg>
           </a>
-            <a
-              href="https://github.com/nazmul1582"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+          <a
+            href="https://github.com/nazmul1582"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -80,11 +83,11 @@ export default function Footer() {
               />
             </svg>
           </a>
-            <a
-              href="https://nazmul1582.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
+          <a
+            href="https://nazmul1582.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all hover:scale-110"
           >
             <svg
               className="w-6 h-6"
