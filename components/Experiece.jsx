@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Reveal } from "./Animation";
 
 export default function Experiece() {
   const experieces = [
@@ -52,14 +53,14 @@ export default function Experiece() {
   return (
     <section id="experience" className="py-24 bg-slate-900/50 relative">
       <div className="container max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
             Experience
           </h2>
           <h3 className="text-3xl sm:text-4xl font-bold text-white">
             Career Trajectory
           </h3>
-        </div>
+        </Reveal>
 
         <div className="max-w-4xl mx-auto relative timeline-line pl-8 space-y-8 lg:space-y-12">
           {experieces.map((item) => (

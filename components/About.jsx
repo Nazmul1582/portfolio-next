@@ -1,5 +1,6 @@
 import { ChartLine, Rocket, UsersRound } from "lucide-react";
 import CountUp from "./CountUp";
+import { Reveal } from "./Animation";
 
 export default function About() {
   return (
@@ -7,13 +8,16 @@ export default function About() {
       <div className="container max-w-7xl mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
-              About Me
-            </h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-              From Intern to <span className="text-gradient">Team Lead</span> in
-              2 Years
-            </h3>
+            <Reveal>
+              <h2 className="text-sm font-semibold text-gradient uppercase tracking-wider mb-3">
+                About Me
+              </h2>
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+                From Intern to <span className="text-gradient">Team Lead</span>{" "}
+                in 2 Years
+              </h3>
+            </Reveal>
+
             <div className="space-y-4 text-slate-400 text-lg leading-relaxed">
               <p>
                 Hello, I am Md. Nazmul Hasan, a Frontend Team Lead and

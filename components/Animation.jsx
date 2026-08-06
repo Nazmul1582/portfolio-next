@@ -36,7 +36,7 @@ const variants = {
   },
 };
 
-export function Reveal({ children, delay = 0, type = "fadeInUp" }) {
+export function Reveal({ children, delay = 0, type = "fadeInUp", className }) {
   const v = variants[type] || variants.fadeInUp;
   return (
     <motion.div
@@ -50,6 +50,7 @@ export function Reveal({ children, delay = 0, type = "fadeInUp" }) {
           transition: { ...v.visible.transition, delay },
         },
       }}
+      className={className}
     >
       {children}
     </motion.div>
