@@ -36,6 +36,11 @@ const variants = {
   },
 };
 
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
 export function Reveal({ children, delay = 0, type = "fadeInUp", className }) {
   const v = variants[type] || variants.fadeInUp;
   return (
@@ -52,6 +57,29 @@ export function Reveal({ children, delay = 0, type = "fadeInUp", className }) {
       }}
       className={className}
     >
+      {children}
+    </motion.div>
+  );
+}
+
+export function StaggerGrid({ children, className }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={stagger}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function StaggerItem({ children, className, type = "fadeInUp" }) {
+  const v = variants[type] || variants.fadeInUp;
+  return (
+    <motion.div variants={v} className={className} {...props}>
       {children}
     </motion.div>
   );
